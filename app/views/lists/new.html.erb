@@ -1,0 +1,20 @@
+<div class= "container mt-5">
+
+  <div>
+  <h1>New list</h1>
+  </div>
+
+  <div>
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name%>
+    <%= f.submit "Add a new list", class: "btn btn-primary" %>
+  <% end %>
+  </div>
+
+  <div>
+    <%= link_to lists_path do %>
+      <i class="fa-solid fa-plus"></i> Go back to lists
+   <% end %>
+  </div>
+
+</div>

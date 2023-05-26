@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div>
+    <h1>list items</h1>
+
+    <div class="list-group">
+    <ul id="lists">
+      <% @lists.each do |list| %>
+    </div>
+
+    <div>
+        <li>
+          <%= link_to list.name, list_path(list)%>
+          <%# <%= link_to list_path(restaurant), data: {turbo: true, turbo_method: :delete, turbo_confirm: "Delete #{list.name}?"} do %>
+            <%# Delete<i class="fa-regular fa-trash-can mb-1"></i> %>
+          <%# <% end %>
+        </li>
+      <% end %>
+    </div>
+    </ul>
+
+  </div>
+
+  <hr>
+
+<div>
+  <%= link_to new_list_path do %>
+    <i class="fa-solid fa-plus"></i> Add a new list
+  <% end %>
+</div>
+</div>
